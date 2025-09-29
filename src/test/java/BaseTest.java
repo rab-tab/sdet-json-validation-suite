@@ -1,6 +1,6 @@
-package base;
-
 import config.TestConfig;
+
+import org.junit.jupiter.api.extension.ExtendWith;
 import util.SchemaValidator;
 
 public abstract class BaseTest {
