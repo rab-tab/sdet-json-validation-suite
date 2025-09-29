@@ -17,7 +17,7 @@ public class FormatValidationTest extends BaseTest {
      **/
 
     @ParameterizedTest(name = "Order ID: {0}")
-    @MethodSource("dataprovider.CachedOrderProvider#ordersProvider")
+    @MethodSource("dataProvider.CachedOrderProvider#ordersProvider")
     @DisplayName("Validate each order has a non-empty ID and a valid status")
     void validateOrderIdentity(CachedOrder order) {
         String orderId = JsonPath.read(order.json, "$.id");
@@ -32,7 +32,7 @@ public class FormatValidationTest extends BaseTest {
      **/
 
     @ParameterizedTest(name = "Order ID: {0}")
-    @MethodSource("dataprovider.CachedOrderProvider#ordersProvider")
+    @MethodSource("dataProvider.CachedOrderProvider#ordersProvider")
     @DisplayName("Validate email exists for customer and is valid")
     void emailValidationTest(CachedOrder order) {
         String orderId = JsonPath.read(order.json, "$.id");
@@ -52,7 +52,7 @@ public class FormatValidationTest extends BaseTest {
      **/
 
     @ParameterizedTest(name = "Order ID: {0}")
-    @MethodSource("dataprovider.CachedOrderProvider#ordersProvider")
+    @MethodSource("dataProvider.CachedOrderProvider#ordersProvider")
     @DisplayName("Validate line array is non empty if status is PAID | PENDING")
     void validateLines(CachedOrder order) {
         String orderId = JsonPath.read(order.json, "$.id");
@@ -80,7 +80,7 @@ public class FormatValidationTest extends BaseTest {
      **/
 
     @ParameterizedTest(name = "Order ID: {0}")
-    @MethodSource("dataprovider.CachedOrderProvider#ordersProvider")
+    @MethodSource("dataProvider.CachedOrderProvider#ordersProvider")
     @DisplayName("Validate Payment / Refund consistency")
     void validatePaymentRefund(CachedOrder order) {
         String orderId = JsonPath.read(order.json, "$.id");
@@ -114,7 +114,7 @@ public class FormatValidationTest extends BaseTest {
      **/
 
     @ParameterizedTest(name = "Order ID: {0}")
-    @MethodSource("dataprovider.CachedOrderProvider#ordersProvider")
+    @MethodSource("dataProvider.CachedOrderProvider#ordersProvider")
     @DisplayName("Validate Shipping fee for all orders")
     void validateShippingFee(CachedOrder order) {
         String orderId = JsonPath.read(order.json, "$.id");
