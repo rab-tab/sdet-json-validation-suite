@@ -1,0 +1,628 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "store": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "dateGenerated": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "currency",
+        "dateGenerated"
+      ]
+    },
+    "orders": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAt": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "customer": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "loyaltyTier": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "email",
+                "loyaltyTier"
+              ]
+            },
+            "lines": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "sku": {
+                      "type": "string"
+                    },
+                    "qty": {
+                      "type": "integer"
+                    },
+                    "price": {
+                      "type": "number"
+                    },
+                    "category": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "sku",
+                    "qty",
+                    "price",
+                    "category"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "sku": {
+                      "type": "string"
+                    },
+                    "qty": {
+                      "type": "integer"
+                    },
+                    "price": {
+                      "type": "number"
+                    },
+                    "category": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "sku",
+                    "qty",
+                    "price",
+                    "category"
+                  ]
+                }
+              ]
+            },
+            "discounts": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "amount": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "amount"
+                  ]
+                }
+              ]
+            },
+            "shipping": {
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "fee": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "method",
+                "fee"
+              ]
+            },
+            "payment": {
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "captured": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "method",
+                "captured"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "createdAt",
+            "status",
+            "customer",
+            "lines",
+            "discounts",
+            "shipping",
+            "payment"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAt": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "customer": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id"
+              ]
+            },
+            "lines": {
+              "type": "array",
+              "items": {}
+            },
+            "discounts": {
+              "type": "array",
+              "items": {}
+            },
+            "shipping": {
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "fee": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "method",
+                "fee"
+              ]
+            },
+            "payment": {
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "captured": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "method",
+                "captured"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "createdAt",
+            "status",
+            "customer",
+            "lines",
+            "discounts",
+            "shipping",
+            "payment"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAt": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "customer": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "email": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "email"
+              ]
+            },
+            "lines": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "sku": {
+                      "type": "string"
+                    },
+                    "qty": {
+                      "type": "integer"
+                    },
+                    "price": {
+                      "type": "number"
+                    },
+                    "category": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "sku",
+                    "qty",
+                    "price",
+                    "category"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "sku": {
+                      "type": "string"
+                    },
+                    "qty": {
+                      "type": "integer"
+                    },
+                    "price": {
+                      "type": "number"
+                    },
+                    "category": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "sku",
+                    "qty",
+                    "price",
+                    "category"
+                  ]
+                }
+              ]
+            },
+            "discounts": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "amount": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "amount"
+                  ]
+                }
+              ]
+            },
+            "shipping": {
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "fee": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "method",
+                "fee"
+              ]
+            },
+            "payment": {
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "captured": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "method",
+                "captured"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "createdAt",
+            "status",
+            "customer",
+            "lines",
+            "discounts",
+            "shipping",
+            "payment"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAt": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "customer": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "email": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "email"
+              ]
+            },
+            "lines": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "sku": {
+                      "type": "string"
+                    },
+                    "qty": {
+                      "type": "integer"
+                    },
+                    "price": {
+                      "type": "number"
+                    },
+                    "category": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "sku",
+                    "qty",
+                    "price",
+                    "category"
+                  ]
+                }
+              ]
+            },
+            "refund": {
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "type": "number"
+                },
+                "issuedAt": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "amount",
+                "issuedAt"
+              ]
+            },
+            "shipping": {
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "fee": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "method",
+                "fee"
+              ]
+            },
+            "payment": {
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "captured": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "method",
+                "captured"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "createdAt",
+            "status",
+            "customer",
+            "lines",
+            "refund",
+            "shipping",
+            "payment"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAt": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "customer": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "email": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "email"
+              ]
+            },
+            "lines": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "sku": {
+                      "type": "string"
+                    },
+                    "qty": {
+                      "type": "integer"
+                    },
+                    "price": {
+                      "type": "number"
+                    },
+                    "category": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "sku",
+                    "qty",
+                    "price",
+                    "category"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "sku": {
+                      "type": "string"
+                    },
+                    "qty": {
+                      "type": "integer"
+                    },
+                    "price": {
+                      "type": "number"
+                    },
+                    "category": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "sku",
+                    "qty",
+                    "price",
+                    "category"
+                  ]
+                }
+              ]
+            },
+            "discounts": {
+              "type": "array",
+              "items": {}
+            },
+            "shipping": {
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "fee": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "method",
+                "fee"
+              ]
+            },
+            "payment": {
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "captured": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "method",
+                "captured"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "createdAt",
+            "status",
+            "customer",
+            "lines",
+            "discounts",
+            "shipping",
+            "payment"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "store",
+    "orders"
+  ]
+}
+
