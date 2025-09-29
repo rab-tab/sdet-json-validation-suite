@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class CachedDataProvider {
+public class CachedOrderProvider {
     public static class CachedOrder {
         public final JsonNode node;
         public final String json;
