@@ -1,8 +1,8 @@
-import base.BaseTest;
 import com.jayway.jsonpath.JsonPath;
 import dataProvider.CachedOrderProvider.CachedOrder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -11,6 +11,7 @@ import java.util.Map;
 
 import static config.TestConfig.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 public class FormatValidationTest extends BaseTest {
     /**

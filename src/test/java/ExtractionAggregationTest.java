@@ -1,8 +1,8 @@
-import base.BaseTest;
 import config.TestConfig;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import util.OrderUtil;
 
 import java.util.Arrays;
@@ -15,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class ExtractionAggregationTest extends BaseTest {
-
 
     /**
      * List of all order IDs

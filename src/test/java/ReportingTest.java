@@ -1,8 +1,8 @@
-import base.BaseTest;
 import com.fasterxml.jackson.databind.JsonNode;
 import dataProvider.CachedOrderProvider;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import util.OrderUtil;
 
 import java.util.ArrayList;
@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 public class ReportingTest extends BaseTest {
 
