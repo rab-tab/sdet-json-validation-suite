@@ -2,6 +2,7 @@ import base.BaseTest;
 import com.jayway.jsonpath.JsonPath;
 import dataProvider.CachedOrderProvider.CachedOrder;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -34,6 +35,7 @@ public class FormatValidationTest extends BaseTest {
     @ParameterizedTest(name = "Order ID: {0}")
     @MethodSource("dataProvider.CachedOrderProvider#ordersProvider")
     @DisplayName("Validate email exists for customer and is valid")
+    @Tag("expected-failure")
     void emailValidationTest(CachedOrder order) {
         String orderId = JsonPath.read(order.json, "$.id");
         Object emailObj = JsonPath.using(CONF).parse(order.json).read("$.customer.email");
@@ -54,6 +56,7 @@ public class FormatValidationTest extends BaseTest {
     @ParameterizedTest(name = "Order ID: {0}")
     @MethodSource("dataProvider.CachedOrderProvider#ordersProvider")
     @DisplayName("Validate line array is non empty if status is PAID | PENDING")
+    @Tag("expected-failure")
     void validateLines(CachedOrder order) {
         String orderId = JsonPath.read(order.json, "$.id");
         String status = JsonPath.read(order.json, "$.status");

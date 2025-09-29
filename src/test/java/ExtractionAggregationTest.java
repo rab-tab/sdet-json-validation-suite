@@ -1,6 +1,7 @@
 import base.BaseTest;
 import config.TestConfig;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import util.OrderUtil;
 
@@ -34,6 +35,7 @@ public class ExtractionAggregationTest extends BaseTest {
      **/
 
     @Test
+    @Tag("expected-failure")
     @DisplayName("Count of total line items across all orders")
     void testTotalLineItems() {
         int totalLines = OrderUtil.countTotalLines();
@@ -109,6 +111,7 @@ public class ExtractionAggregationTest extends BaseTest {
      **/
 
     @Test
+    @Tag("expected-failure")
     @DisplayName("Cancelled orders with correct refund amount")
     void testCancelledOrdersWithCorrectRefund() {
         List<String> problematicOrders = OrderUtil.getCancelledOrdersWithIncorrectRefund();
