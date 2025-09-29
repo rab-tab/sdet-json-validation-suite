@@ -18,6 +18,7 @@
         <jsonpath.version>2.8.0</jsonpath.version>
         <json.version>20231013</json.version>
         <everit.json.version>1.3.0</everit.json.version>
+        <maven.surefire.report.plugin.version>3.1.2</maven.surefire.report.plugin.version>
 
         <!-- Plugin versions -->
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
@@ -57,6 +58,20 @@
             <scope>compile</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- jqwik for property-based testing -->
         <dependency>
             <groupId>net.jqwik</groupId>
@@ -78,6 +93,7 @@
             <version>${everit.json.version}</version>
             <scope>compile</scope>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -99,6 +115,11 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>${maven.surefire.report.plugin.version}</version>
             </plugin>
         </plugins>
     </build>
